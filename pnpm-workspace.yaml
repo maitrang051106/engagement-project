@@ -1,0 +1,6 @@
+packages:
+  - "hardhat"
+  - "frontend"
+
+onlyBuiltDependencies:
+  - esbuild

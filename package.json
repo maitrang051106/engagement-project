@@ -1,0 +1,25 @@
+{
+  "name": "engagement-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo demo: blockchain engagement registry with a cat wedding frontend.",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev:frontend": "pnpm --filter @engagement/frontend dev",
+    "compile": "pnpm --filter @engagement/hardhat compile",
+    "test": "pnpm --filter @engagement/hardhat test",
+    "deploy:local": "pnpm --filter @engagement/hardhat deploy:local",
+    "deploy:bsc-testnet": "pnpm --filter @engagement/hardhat deploy:bsc-testnet"
+  },
+  "keywords": [
+    "hardhat",
+    "nextjs",
+    "wagmi",
+    "bsc-testnet",
+    "web3-education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.19.0"
+}

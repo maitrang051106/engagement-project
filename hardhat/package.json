@@ -1,0 +1,25 @@
+{
+  "name": "@engagement/hardhat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "hardhat compile",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.ts --network hardhatMainnet",
+    "deploy:bsc-testnet": "hardhat run scripts/deploy.ts --network bscTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^4.0.0",
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.8.5",
+    "chai": "^6.2.2",
+    "dotenv": "^18.0.5",
+    "ethers": "^6.14.0",
+    "hardhat": "^3.18.1",
+    "mocha": "^12.0.0",
+    "typescript": "~6.0.3"
+  }
+}
