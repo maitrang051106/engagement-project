@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Heart, Landmark, ShieldCheck, Trees, Wallet } from "lucide-react";
 import { useMemo, useState } from "react";
 import { formatEther, keccak256, parseEther, toBytes } from "viem";
+import { injected } from "@wagmi/core";
 import { useAccount, useConnect, useReadContract, useWriteContract } from "wagmi";
-import { injected } from "wagmi/connectors";
 import { LoveTree } from "@/components/LoveTree";
 import { engagementAbi, engagementAddress } from "@/lib/contract";
 

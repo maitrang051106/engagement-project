@@ -13,6 +13,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.90.2
         version: 5.104.1(react@19.3.0)
+      '@wagmi/core':
+        specifier: 2.22.1
+        version: 2.22.1(@tanstack/query-core@5.104.1)(@types/react@19.3.0)(immer@11.1.18)(react@19.3.0)(typescript@5.9.3)(use-sync-external-store@1.4.0(react@19.3.0))(viem@2.57.3(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76))
       framer-motion:
         specifier: ^12.23.22
         version: 12.43.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)

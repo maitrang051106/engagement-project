@@ -1,15 +1,9 @@
 "use client";
 
-type EngagementRecord = readonly [
-  `0x${string}`,
-  string,
-  string,
-  `0x${string}`,
-  `0x${string}`,
-  string,
-  string,
-  bigint
-];
+type EngagementRecord = {
+  husbandName: string;
+  wifeName: string;
+};
 
 export function LoveTree({ records }: { records: readonly EngagementRecord[] }) {
   const visibleRecords = records.length > 0 ? records : demoRecords;
@@ -29,14 +23,14 @@ export function LoveTree({ records }: { records: readonly EngagementRecord[] }) 
           const x = 40 + Math.sin(angle) * 300;
           const y = 104 + index * 54;
           return (
-            <g key={`${record[1]}-${record[2]}-${index}`}>
+            <g key={`${record.husbandName}-${record.wifeName}-${index}`}>
               <path className="tree-link" d={`M${centerX} ${rootY + 25} C${centerX} ${y - 24}, ${x} ${y - 24}, ${x} ${y}`} fill="none" />
               <circle cx={x} cy={y} r="24" fill={index % 2 === 0 ? "#d94f70" : "#c9932f"} />
               <text x={x} y={y - 2} textAnchor="middle" className="fill-white text-[10px] font-bold">
-                {record[1].slice(0, 8)}
+                {record.husbandName.slice(0, 8)}
               </text>
               <text x={x} y={y + 10} textAnchor="middle" className="fill-white text-[10px] font-bold">
-                {record[2].slice(0, 8)}
+                {record.wifeName.slice(0, 8)}
               </text>
             </g>
           );
@@ -46,9 +40,7 @@ export function LoveTree({ records }: { records: readonly EngagementRecord[] }) 
   );
 }
 
-const zeroHash = "0x0000000000000000000000000000000000000000000000000000000000000000";
-
 const demoRecords: EngagementRecord[] = [
-  ["0x0000000000000000000000000000000000000000", "Minh", "Linh", zeroHash, zeroHash, "Demo", "Demo", 0n],
-  ["0x0000000000000000000000000000000000000000", "Bao", "An", zeroHash, zeroHash, "Demo", "Demo", 0n]
+  { husbandName: "Minh", wifeName: "Linh" },
+  { husbandName: "Bao", wifeName: "An" }
 ];

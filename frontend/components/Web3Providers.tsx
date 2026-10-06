@@ -2,9 +2,9 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useState } from "react";
+import { injected } from "@wagmi/core";
 import { WagmiProvider, createConfig, http } from "wagmi";
 import { bscTestnet, hardhat } from "wagmi/chains";
-import { injected } from "wagmi/connectors";
 
 const config = createConfig({
   chains: [hardhat, bscTestnet],

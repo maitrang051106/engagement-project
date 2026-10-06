@@ -6,8 +6,8 @@ Monorepo demo: mot dApp ghi hon uoc len blockchain, co KYC gia lap bang hash anh
 
 ```text
 engagement-project/
-├── contracts/Engagement.sol
 ├── hardhat/
+│   ├── contracts/Engagement.sol
 │   ├── hardhat.config.ts
 │   ├── scripts/deploy.ts
 │   └── test/Engagement.ts
